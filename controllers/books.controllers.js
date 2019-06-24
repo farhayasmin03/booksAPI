@@ -52,7 +52,7 @@ exports.findOne = (req, res) => {
 // Update a Books identified by the BooksId in the request
 exports.update = (req, res) => {
     // Validate request
-    if (!req.body.content) {
+    if (!req.body.content||!req.body.title) {
         return res.status(400).send({
             message: "Books content can not be empty"
         });
@@ -63,10 +63,10 @@ exports.update = (req, res) => {
             return res.status(500).send(err.message)
         }
         if (req.body.title !== undefined) {
-            data.title = req.body.title
+            title = req.body.title
         }
         if (req.body.content != undefined) {
-            data.content = req.body.content
+            content = req.body.content
         }
         books.save()
             .then(data => {
@@ -81,5 +81,7 @@ exports.update = (req, res) => {
 
 // Delete a Books with the specified BooksId in the request
 exports.delete = (req, res) => {
-
+    Books.findOneAndRemove(req.params.booksId,function(req,res){
+        
+    })
 };

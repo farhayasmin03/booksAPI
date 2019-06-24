@@ -11,13 +11,13 @@
 6. Hit `http://localhost:3000` to add the title and contents of books.
 
 ## Functionalities
-1. This project is node api for books that is used to get data,Add data,Find data by id ,Update data and delete data
-2. In local host you can add data which is in a form containing title and contents,it will add data to mongoDB
-3. postman is used in this project for performing integration testing with your API
+1. This project is Node API for books that is used to Get data, Add data, Find data by ID, Update data, and delete data.
+2. In localhost you can add data which is in a form containing title and contents, it will add data to MongoDB.
+3. Postman is used in this project for performing integration testing with the API.
 
 ## Routes
 
-1. Hit `http://localhost:3000/api/books/` GET request is used to retrieve all books data
+1. `http://localhost:3000/api/books/` GET request is used to retrieve all books data
 2. `http://localhost:3000/api/books/` POST request is used to create a new book data
 3. `http://localhost:3000/api/books/:booksId` GET request is used to retrieve one book data
 4. `http://localhost:3000/api/books/:booksId` PUT request is used to update data by using Id

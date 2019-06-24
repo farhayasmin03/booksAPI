@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 // create express app
 const app = express();
-
+app.set('view engine', 'ejs');
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
     extended: true
@@ -24,9 +24,7 @@ db.once('open', function () {
 });
 // define a simple route
 app.get('/', (req, res) => {
-    res.json({
-        "message": "Welcome to the application. Take books details quickly. Organize and keep track of all your books."
-    });
+    res.render("index")
 });
 
 // listen for requests

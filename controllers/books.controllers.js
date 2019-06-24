@@ -7,7 +7,7 @@ exports.create = (req, res) => {
     // Validate request
     if (!req.body.content) {
         return res.status(400).send({
-            message: "Books content can not be empty"
+            message: "Books content cannot be empty"
         });
     }
 
@@ -81,7 +81,9 @@ exports.update = (req, res) => {
 
 // Delete a Books with the specified BooksId in the request
 exports.delete = (req, res) => {
-    Books.findOneAndRemove(req.params.booksId,function(req,res){
-        
-    })
+    Books.remove(req.params.booksId)
+        .then((result)=>{
+            res.status(204).send({});
+        });
+ 
 };

@@ -11,22 +11,44 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Book Database</title>
+
+    <style>
+        .container{
+            padding-top: 3rem;
+        }
+        header{
+            padding-top: 3rem;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <h1>Book Entry</h1>
+    </header>
     <div class="container">
-        <form action="/api/books" method="POST">
-            <div class="form-group">
-                <label>Books title</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                    <form action="/api/books" method="POST">
+                        <div class="form-group">
+                            <label>Books title</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+                        </div>
+                        <div class="form-group">
+                            <label >Contents</label>
+                            <input type="text" class="form-control" id="content" name="content" placeholder="content">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <!-- <div>
+                        <form>
+                            <button type="submit" class="btn btn-success">Get Data</button>
+                        </form>
+                    </div> -->
             </div>
-            <div class="form-group">
-                <label >Contents</label>
-                <input type="text" class="form-control" id="content" name="content" placeholder="content">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
+        
     </div>
 
     <!-- Optional JavaScript -->
@@ -40,6 +62,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    
 </body>
 
 </html>

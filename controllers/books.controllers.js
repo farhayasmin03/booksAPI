@@ -37,6 +37,9 @@ exports.findAll = (req, res) => {
         } else {
             // console.log(data[0]);
             res.json(data);
+            res.render('index',{
+                bookdata:data
+            })
         }
     });
 
